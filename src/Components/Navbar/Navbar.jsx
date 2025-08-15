@@ -14,9 +14,10 @@ export const Navbar = () => {
     { stage: "kids", stageLabel: "Kids", link: "/kids" },
   ];
 
-  const getMenu = (stage, stageLabel, link) => {
+  const getMenu = (key, stage, stageLabel, link) => {
     return (
       <li
+        key={key}
         onClick={() => {
           setMenu(stage);
         }}
@@ -32,12 +33,12 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="" />
         <p>SHOPPER</p>
       </div>
       <ul className="nav-menu">
-        {allMenu.map((item) => {
-          return getMenu(item.stage, item.stageLabel, item.link);
+        {allMenu.map((item, idx) => {
+          return getMenu(idx, item.stage, item.stageLabel, item.link);
         })}
       </ul>
       <div className="nav-login-cart">
@@ -45,7 +46,7 @@ export const Navbar = () => {
           <button>Login</button>
         </Link>
         <Link to="/cart">
-          <img src={cart_icon} alt="cart_icon" />
+          <img src={cart_icon} alt="" />
         </Link>
         <div className="nav-cart-count">0</div>
       </div>
