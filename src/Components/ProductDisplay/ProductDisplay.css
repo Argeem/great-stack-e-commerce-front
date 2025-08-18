@@ -92,6 +92,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .product-display-right button:hover {
