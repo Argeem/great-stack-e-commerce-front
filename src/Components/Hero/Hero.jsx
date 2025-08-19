@@ -16,8 +16,8 @@ export const Hero = () => {
           <p>Collection</p>
           <p>for every one</p>
         </div>
-        <div className="hero-lastest-btn">
-          <div>Lastest Collection</div>
+        <div className="hero-latest-btn">
+          <div>Latest Collection</div>
           <img src={arrow_icon} alt="" />
         </div>
       </div>
