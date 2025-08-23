@@ -4,10 +4,10 @@ import { Item } from "../Item/Item";
 
 export const RelatedProducts = () => {
   return (
-    <div className="related_product">
+    <div className="related-product">
       <h1>Related Products</h1>
       <hr />
-      <div className="related_product_item">
+      <div className="related-product-item">
         {data_product.map((item, idx) => {
           return (
             <Item
